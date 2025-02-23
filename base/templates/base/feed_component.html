@@ -3,7 +3,7 @@
     <div class="roomListRoom__header">
       <a href="{% url 'user-profile' room.host.id %}" class="roomListRoom__author">
         <div class="avatar avatar--small">
-          <img src="https://randomuser.me/api/portraits/women/11.jpg" />
+          <img src="{{room.host.avatar.url}}" />
         </div>
         <span>@{{room.host.username}}</span>
       </a>
@@ -40,7 +40,7 @@
 
 
 
-{% for room in rooms %}
+<!-- {% for room in rooms %}
     <div>
         
         <a href="{% url 'user-profile' room.host.id %}">@{{room.host.username}}</a>
@@ -48,4 +48,4 @@
         <small>{{room.topic.name}}</small>
         <hr>
     </div>
-{% endfor %}
+{% endfor %} -->
